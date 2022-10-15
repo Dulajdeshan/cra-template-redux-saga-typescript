@@ -1,0 +1,28 @@
+name: Create CRA Template and Testing
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+    branches:
+      - main
+
+jobs:
+  createReactAppTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: Create CRA from Template
+        run: yarn create react-app react-app --template file:.
+      - name: Lint Test
+        run: cd react-app && yarn lint
+      - name: Testing
+        run: cd react-app && yarn test

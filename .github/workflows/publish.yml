@@ -1,0 +1,24 @@
+name: Publish Package to npmjs
+on:
+  push:
+    branches:
+      - release
+jobs:
+  release:
+    name: publish
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/release' }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      # Setup .npmrc file to publish to npm
+      - name: node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Install dependencies
+        run: yarn --prefer-offline
+      - run: yarn semantic-release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
