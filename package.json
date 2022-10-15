@@ -50,8 +50,7 @@
     "test": "jest",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.ts,.jsx,.tsx template/src",
-    "format": "yarn run lint --fix & yarn prettier --write 'tmplate/src/**/*.{js,jsx,ts,tsx}'",
-    "semantic-release": "semantic-release --branches release"
+    "format": "yarn run lint --fix & yarn prettier --write 'tmplate/src/**/*.{js,jsx,ts,tsx}'"
   },
   "eslintConfig": {
     "extends": [
@@ -84,8 +83,6 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.31.10",
-    "prettier": "^2.7.1",
-    "semantic-release": "^19.0.5",
-    "semantic-release-cli": "^5.4.4"
+    "prettier": "^2.7.1"
   }
 }
