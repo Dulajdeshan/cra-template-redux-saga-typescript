@@ -15,21 +15,14 @@ jobs:
   create-react-app-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Node
+      - name: Use Node.js 16.x
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.OS }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.OS }}-yarn-
-            ${{ runner.OS }}-
+
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
       - name: Create CRA from Template
         run: yarn create react-app react-app --template file:.
       - name: Lint Test
