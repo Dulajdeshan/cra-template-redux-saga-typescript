@@ -5,11 +5,11 @@ on:
       - release
 jobs:
   release:
-    name: publish
+    name: Release and Publish
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/release' }}
     steps:
-      - name: checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
       # Setup .npmrc file to publish to npm
       - name: node
