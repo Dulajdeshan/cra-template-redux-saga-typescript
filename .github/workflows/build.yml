@@ -26,6 +26,6 @@ jobs:
       - name: Create CRA from Template
         run: yarn create react-app react-app --template file:.
       - name: Lint Test
-        run: cd react-app && yarn lint --resolve-plugins-relative-to=./
+        run: cd react-app && yarn lint --resolve-plugins-relative-to=./react-app
       - name: Testing
         run: cd react-app &&  yarn test
