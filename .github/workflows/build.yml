@@ -11,6 +11,11 @@ on:
     branches:
       - main
 
+defaults:
+  run:
+    shell: bash
+    working-directory: app
+
 jobs:
   create-react-app-test:
     runs-on: ubuntu-latest
@@ -26,6 +31,8 @@ jobs:
       - name: Create CRA from Template
         run: yarn create react-app react-app --template file:.
       - name: Lint Test
-        run: cd react-app && yarn lint
+        run: yarn lint
+        working-directory: app/react-app
       - name: Testing
-        run: cd react-app && yarn test
+        run: yarn test
+        working-directory: app/react-app
