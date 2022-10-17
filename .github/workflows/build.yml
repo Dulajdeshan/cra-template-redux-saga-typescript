@@ -24,10 +24,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Create CRA from Template
-        run: yarn create react-app temp-project/react-app --template file:.
+        run: yarn create react-app react-app --template file:.
       - name: Lint Test
-        run: yarn lint --resolve-plugins-relative-to=./
-        working-directory: temp-project/react-app
+        run: cd react-app && yarn lint --resolve-plugins-relative-to=./
       - name: Testing
-        run: yarn test
-        working-directory: temp-project/react-app
+        run: cd react-app &&  yarn test
