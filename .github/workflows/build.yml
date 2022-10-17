@@ -15,8 +15,8 @@ jobs:
   create-react-app-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Create temp directory cra-template & cra-app
-        run: mkdir cra-template && mkdir cra-app
+      - name: Create temp directory cra-template
+        run: mkdir cra-template
       - name: Use Node.js 16.x
         uses: actions/setup-node@v3
         with:
@@ -26,8 +26,7 @@ jobs:
         with:
           path: ${{ github.workspace }}/cra-template
       - name: Create CRA from Template
-        run: yarn create react-app react-app --template file:../cra-template
-        working-directory: cra-app
+        run: yarn create react-app cra-app --template file:../cra-template
       - name: Lint Test
         run: cd react-app && yarn lint
         working-directory: cra-app
