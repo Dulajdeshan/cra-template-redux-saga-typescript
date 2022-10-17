@@ -15,7 +15,7 @@ jobs:
   create-react-app-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Create temp directory cra-template
+      - name: Create temp directory cra-template & cra-app
         run: mkdir cra-template
       - name: Use Node.js 16.x
         uses: actions/setup-node@v3
