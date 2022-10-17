@@ -23,6 +23,8 @@ jobs:
           node-version: 16.x
       - name: Checkout Code
         uses: actions/checkout@v3
+        with:
+          path: ${{ GITHUB_WORKSPACE }}/cra-template
       - name: Move files to cra-template
         run: ls
 #      - name: Create CRA from Template
