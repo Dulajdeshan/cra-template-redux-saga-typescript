@@ -26,7 +26,8 @@ jobs:
         with:
           path: ${{ github.workspace }}/cra-template
       - name: Create CRA from Template
-        run: yarn create react-app cra-app --template file:../cra-template
+        run: yarn create react-app react-app --template file:../cra-template
+        working-directory: cra-app
       - name: Lint Test
         run: cd react-app && yarn lint
         working-directory: cra-app
