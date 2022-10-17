@@ -7,13 +7,13 @@
 React Redux and Saga template for [Create React App](https://github.com/facebook/create-react-app)
 
 ## What is Included?
-- [React Js - 18.2.0](https://www.npmjs.com/package/react)
-- [React Redux - 8.0.4](https://www.npmjs.com/package/react-redux)
-- [ReduxJs Toolkit - 1.8.6](https://www.npmjs.com/package/@reduxjs/toolkit)
-- [Redux Saga - 1.2.1](https://www.npmjs.com/package/redux-saga)
-- [Typescript - 4.8.4](https://www.npmjs.com/package/typescript)
-- [Eslint - 8.25.0](https://www.npmjs.com/package/eslint)
-- [Prettier - 2.7.1](https://www.npmjs.com/package/prettier)
+- [React Js](https://www.npmjs.com/package/react)
+- [React Redux](https://www.npmjs.com/package/react-redux)
+- [ReduxJs Toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
+- [Redux Saga](https://www.npmjs.com/package/redux-saga)
+- [Typescript](https://www.npmjs.com/package/typescript)
+- [Eslint](https://www.npmjs.com/package/eslint)
+- [Prettier](https://www.npmjs.com/package/prettier)
 
 ## Usage
 
@@ -27,14 +27,6 @@ npx create-react-app my-app --template redux-saga-typescript
 # or
 
 yarn create react-app my-app --template redux-saga-typescript
-```
-
-## TypeScript
-
-Use [cra-template-redux-saga-typescript](https://www.npmjs.com/package/cra-template-redux-saga-typescript), which is based on this template
-
-```sh
-npx create-react-app my-app --template redux-saga-typescript
 ```
 
 Cloning this repo pulls down the Redux Saga template only; not a bundled and configured Create React App.
