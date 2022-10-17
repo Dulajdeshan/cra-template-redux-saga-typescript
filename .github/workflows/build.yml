@@ -23,7 +23,8 @@ jobs:
           node-version: 16.x
       - name: Checkout Code
         uses: actions/checkout@v3
-        working-directory: cra-template
+      - name: Move files to cra-template
+        run: mv -v ./* ./cra-template
       - name: Create CRA from Template
         run: yarn create react-app react-app --template file:../cra-template
         working-directory: cra-app
