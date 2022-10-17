@@ -24,13 +24,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Move files to cra-template
-        run: mv -v ./* ./cra-template
-      - name: Create CRA from Template
-        run: yarn create react-app react-app --template file:../cra-template
-        working-directory: cra-app
-      - name: Lint Test
-        run: cd react-app && yarn lint
-        working-directory: cra-app
-      - name: Testing
-        run: cd react-app &&  yarn test
-        working-directory: cra-app
+        run: ls
+#      - name: Create CRA from Template
+#        run: yarn create react-app react-app --template file:../cra-template
+#        working-directory: cra-app
+#      - name: Lint Test
+#        run: cd react-app && yarn lint
+#        working-directory: cra-app
+#      - name: Testing
+#        run: cd react-app &&  yarn test
+#        working-directory: cra-app
