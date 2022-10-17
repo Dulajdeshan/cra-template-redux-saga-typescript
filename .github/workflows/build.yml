@@ -25,14 +25,12 @@ jobs:
         uses: actions/checkout@v3
         with:
           path: ${{ github.workspace }}/cra-template
-      - name: Move files to cra-template
-        run: ls && ls cra-template
-#      - name: Create CRA from Template
-#        run: yarn create react-app react-app --template file:../cra-template
-#        working-directory: cra-app
-#      - name: Lint Test
-#        run: cd react-app && yarn lint
-#        working-directory: cra-app
-#      - name: Testing
-#        run: cd react-app &&  yarn test
-#        working-directory: cra-app
+      - name: Create CRA from Template
+        run: yarn create react-app react-app --template file:../cra-template
+        working-directory: cra-app
+      - name: Lint Test
+        run: cd react-app && yarn lint
+        working-directory: cra-app
+      - name: Testing
+        run: cd react-app &&  yarn test
+        working-directory: cra-app
