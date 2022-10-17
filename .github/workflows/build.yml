@@ -11,6 +11,10 @@ on:
     branches:
       - main
 
+default:
+  run:
+    working-directory: cra-template
+
 jobs:
   create-react-app-test:
     runs-on: ubuntu-latest
@@ -25,7 +29,7 @@ jobs:
       - name: Create temp directory cra-app
         run: mkdir cra-app
       - name: Create CRA from Template
-        run: yarn create react-app react-app --template file:../
+        run: yarn create react-app react-app --template file:../cra-template
         working-directory: cra-app
       - name: Lint Test
         run: cd react-app && yarn lint
