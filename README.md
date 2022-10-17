@@ -1,7 +1,7 @@
 # cra-template-redux-saga-typescript
 
-![build status](https://img.shields.io/github/workflow/status/dulajdeshan/cra-template-redux-saga-typescript/Tests/main?style=flat-square)
-[![npm version](https://img.shields.io/npm/v/cra-template-redux-saga-typescript.svg?style=flat-square)](https://www.npmjs.com/package/cra-template-redux-saga-typescript)
+![build status](https://img.shields.io/github/workflow/status/dulajdeshan/cra-template-redux-saga-typescript/Run%20Tests/main)
+[![npm version](https://img.shields.io/npm/v/cra-template-redux-saga-typescript)](https://www.npmjs.com/package/cra-template-redux-saga-typescript)
 [![npm downloads](https://img.shields.io/npm/dm/cra-template-redux-saga-typescript.svg?style=flat-square)](https://www.npmjs.com/package/cra-template-redux-saga-typescript)
 
 React Redux and Saga template for [Create React App](https://github.com/facebook/create-react-app)
