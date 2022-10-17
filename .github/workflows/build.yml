@@ -26,7 +26,7 @@ jobs:
         with:
           path: ${{ github.workspace }}/cra-template
       - name: Move files to cra-template
-        run: ls
+        run: ls && ls cra-template
 #      - name: Create CRA from Template
 #        run: yarn create react-app react-app --template file:../cra-template
 #        working-directory: cra-app
