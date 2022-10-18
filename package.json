@@ -1,12 +1,16 @@
 {
   "name": "cra-template-redux-saga-typescript",
   "description": "React Template - Typescript, Redux (Redux Toolkit), Saga with Unit Testing",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "template.json",
   "files": [
+    "template",
     "template.json"
   ],
+  "engines": {
+    "node": ">=8"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/dulajdeshan/cra-template-redux-saga-typescript.git"
