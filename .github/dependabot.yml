@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '13:00'
+    target-branch: "master"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: fix
+      prefix-development: refactor
+      include: scope
