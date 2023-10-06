@@ -1,1 +1,1 @@
-import 'react-scripts'
+import 'react-scripts';

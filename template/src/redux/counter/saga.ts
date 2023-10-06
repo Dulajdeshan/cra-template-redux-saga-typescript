@@ -1,5 +1,5 @@
-import { delay, put, takeEvery, Effect, ForkEffect } from 'redux-saga/effects';
-import { PayloadAction } from '@reduxjs/toolkit';
+import { delay, put, takeEvery, type Effect, type ForkEffect } from 'redux-saga/effects';
+import { type PayloadAction } from '@reduxjs/toolkit';
 import { counterActions } from './slice';
 
 export function* watchIncrementAsync(): Generator<Effect, void> {
@@ -13,7 +13,7 @@ export function* watchDecrementAsync(): Generator<Effect, void> {
 }
 
 export function* watchIncrementByAmountAsync(
-  action: PayloadAction<any>
+  action: PayloadAction<any>,
 ): Generator<Effect, void> {
   try {
     if (typeof action.payload !== 'number') {
@@ -32,7 +32,7 @@ export function* watchCounterSagas(): Generator<ForkEffect, void> {
   yield takeEvery(counterActions.decrementAsync, watchDecrementAsync);
   yield takeEvery(
     counterActions.incrementByAmountAsync,
-    watchIncrementByAmountAsync
+    watchIncrementByAmountAsync,
   );
 }
 
