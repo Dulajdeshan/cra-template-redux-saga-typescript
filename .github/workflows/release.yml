@@ -15,7 +15,7 @@ jobs:
       - name: node
         uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: '18.x'
       - name: Install dependencies
         run: yarn --prefer-offline
       - name: Install semantic-release
