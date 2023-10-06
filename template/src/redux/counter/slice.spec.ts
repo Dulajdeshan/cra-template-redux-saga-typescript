@@ -1,4 +1,4 @@
-import { counterReducer, counterActions, ICounterSlice } from './slice';
+import { counterReducer, counterActions, type ICounterSlice } from './slice';
 
 describe('counter reducer', () => {
   const initialState: ICounterSlice = {
@@ -23,7 +23,7 @@ describe('counter reducer', () => {
   it('should handle incrementByAmount', () => {
     const actual = counterReducer(
       initialState,
-      counterActions.incrementByAmount(2)
+      counterActions.incrementByAmount(2),
     );
     expect(actual.value).toEqual(5);
   });

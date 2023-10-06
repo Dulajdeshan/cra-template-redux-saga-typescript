@@ -1,5 +1,5 @@
 import { runSaga } from 'redux-saga';
-import { AnyAction } from '@reduxjs/toolkit';
+import { type AnyAction } from '@reduxjs/toolkit';
 import {
   watchIncrementAsync,
   watchDecrementAsync,
